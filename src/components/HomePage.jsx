@@ -43,17 +43,17 @@ const HomePage = () => {
 
     return(
         <>
-            <div class="bg-red-600 bg-opacity-20 h-screen w-screen">
+            <div class="bg-red-600 bg-opacity-20 min-h-screen w-screen">
                 <div className= "flex flex-col items-center justify-center w-screen h-96 bg-[url('https://hips.hearstapps.com/hmg-prod/images/best-luxury-gyms-london-1577449934.jpg')] bg-cover bg-no-repeat bg-center">
                     <p className="sm:text-[70px] text-[50px] text-white my-0 mx-auto text-center">STRIVE to be GREAT</p>
                     <input className="my-0 text-black border border-gray-400 rounded-md w-96 px-4 py-3 mt-4"type="text" placeholder="Search for a Workout" onChange={handleChange} onKeyDown={handleKeyDown}/>
                 </div>
-                <h3 className="text-[50px] text-center">Workouts</h3>
-                <div className="mt-10">
+                <h3 className="mt-2 text-[50px] text-center">Workouts</h3>
+                <div>
                     {checkSearch ? <p className="text-[15px] text-center">Search results: {search}</p> : <></>}
                 </div>
-                <div className="mt-28 ml-8 mx-auto max-w-[1500px]">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="mx-auto max-w-[1500px]">
+                    <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                         {workouts.filter((workout) => {
                             if(search === ""){
                                 return workout
@@ -65,9 +65,9 @@ const HomePage = () => {
                         })
                         .map((workout) => {
                             return (                
-                            <div className="relative flex" key={workout.id}>
+                            <div key={workout.id}>
                                 <Link to={`/oneWorkout/${workout.id}`} onClick={() => getOneWorkout(workout.id)}>
-                                    <div className="absolute inset-0 flex flex-col justify-end px-2 py-6">
+                                    <div className="relative flex flex-col justify-end px-4 py-1">
                                         <div className="border border-red-500 p-4 my-4 bg-gray-100 rounded-lg">
                                             <p className="text-black text-xl"><strong>{workout.name}</strong></p>
                                             <p className="text-black">{workout.date}</p>
