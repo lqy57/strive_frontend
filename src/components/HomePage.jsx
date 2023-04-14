@@ -52,7 +52,7 @@ const HomePage = () => {
                 <div className="mt-10">
                     {checkSearch ? <p className="text-[15px] text-center">Search results: {search}</p> : <></>}
                 </div>
-                <div className="mt-28 mx-auto max-w-[1500px]">
+                <div className="mt-28 ml-8 mx-auto max-w-[1500px]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {workouts.filter((workout) => {
                             if(search === ""){
@@ -67,7 +67,7 @@ const HomePage = () => {
                             return (                
                             <div className="relative flex" key={workout.id}>
                                 <Link to={`/oneWorkout/${workout.id}`} onClick={() => getOneWorkout(workout.id)}>
-                                    <div className="absolute inset-0 flex flex-col justify-end px-4 py-6">
+                                    <div className="absolute inset-0 flex flex-col justify-end px-2 py-6">
                                         <div className="border border-red-500 p-4 my-4 bg-gray-100 rounded-lg">
                                             <p className="text-black text-xl"><strong>{workout.name}</strong></p>
                                             <p className="text-black">{workout.date}</p>
