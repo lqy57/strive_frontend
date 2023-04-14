@@ -25,8 +25,8 @@ const NavBar = () => {
             </div>
             <div className="flex-grow flex justify-end w-auto mt-1 md:mt-0 xl:flex-end xl:ml-[300px] mb-3">
                 <div className="flex">
-                    <button className="inline-block text-[15px] md:text-[18px] px-6 py-3 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-3 mt-0 ">Log In</button>
-                    <button className="inline-block text-[15px] md:text-[18px] px-6 py-3 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-3 mt-0 ml-3">Sign Up</button>
+                    <button className="inline-block text-[15px] md:text-[18px] px-6 py-3 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-3 mt-0 w-32">Log In</button>
+                    <button className="inline-block text-[15px] md:text-[18px] px-6 py-3 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-3 mt-0 ml-3 w-32">Sign Up</button>
                 </div>
             </div>
         </nav>
