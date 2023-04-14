@@ -26,7 +26,7 @@ const Create = (props) => {
 
     const handleCreate = (newWorkout) => {
         axios
-        .post('http://localhost:3000/api/v1/workouts', newWorkout)
+        .post('https://strive-backend.onrender.com/api/v1/workouts', newWorkout)
         .then((response) => {
             console.log(response);
         });

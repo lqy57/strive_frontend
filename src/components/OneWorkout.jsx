@@ -9,7 +9,7 @@ const OneWorkout = () => {
 
     //Delete
     const handleDelete = (event) => {
-        axios.delete(`http://localhost:3000/api/v1/workouts/${event.target.value}`)
+        axios.delete(`https://strive-backend.onrender.com/api/v1/workouts/${event.target.value}`)
         .then((response) =>{
             navigate('/workouts')
         })
@@ -18,7 +18,7 @@ const OneWorkout = () => {
     //rendering data
     useEffect(() => {
         axios
-        .get(`http://localhost:3000/api/v1/workouts/${id}`)
+        .get(`https://strive-backend.onrender.com/api/v1/workouts/${id}`)
         .then((response) => {
             setWorkout(response.data);
         })

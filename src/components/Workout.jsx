@@ -9,9 +9,8 @@ const Workout = () => {
     const {id} = useParams()
     
     const getWorkouts = () => {
-    axios.get('http://localhost:3000/api/v1/workouts')
+    axios.get('https://strive-backend.onrender.com/api/v1/workouts')
         .then((response) => {
-            console.log(response.data);
             setWorkouts(response.data)
         }, 
         (err) => console.log(err))
@@ -19,7 +18,7 @@ const Workout = () => {
     }
 
     const getOneWorkout = (id) => {
-        return axios.get(`http://localhost:3000/api/v1/workouts/${id}`)
+        return axios.get(`https://strive-backend.onrender.com/api/v1/workouts/${id}`)
             .then((response)=>{
                 return response.data
             })

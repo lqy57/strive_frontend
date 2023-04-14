@@ -21,7 +21,7 @@ const HomePage = () => {
     }
 
     const getOneWorkout = (id) => {
-        return axios.get(`http://localhost:3000/api/v1/workouts/${id}`)
+        return axios.get(`https://strive-backend.onrender.com/api/v1/workouts/${id}`)
             .then((response)=>{
                 return response.data
             })
@@ -31,7 +31,7 @@ const HomePage = () => {
         }
 
     const getWorkouts = () => {
-        axios.get('http://localhost:3000/api/v1/workouts')
+        axios.get('https://strive-backend.onrender.com/api/v1/workouts')
         .then((response) => setWorkouts(response.data), 
         (err) => console.log(err))
         .catch((error) => console.log(error))

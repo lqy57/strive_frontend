@@ -10,7 +10,6 @@ const Update = (props) => {
 
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
-        console.log(formData)
     }
 
     const handleSubmit= (e) => {
@@ -20,7 +19,7 @@ const Update = (props) => {
 
     const handleUpdate = (editWorkout) => {
         axios
-                .put(`http://localhost:3000/api/v1/workouts/${editWorkout.id}`, 
+                .put(`https://strive-backend.onrender.com/api/v1/workouts/${editWorkout.id}`, 
                     editWorkout
                 )
                 .then((response) => {
@@ -33,7 +32,7 @@ const Update = (props) => {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:3000/api/v1/workouts/${id}`)
+        .get(`https://strive-backend.onrender.com/api/v1/workouts/${id}`)
         .then((response) => {
             setWorkout(response.data);
             setFormData(response.data);
