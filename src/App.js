@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes} from 'react-router-dom';
+import Create from './components/Create';
+import Update from './components/Update';
+import NavBar from './components/NavBar';
+import Workout from './components/Workout';
+import Exercises from './components/Exercises'
+import HomePage from './components/HomePage';
+import OneWorkout from './components/OneWorkout';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <NavBar/>
+    <div className='ml-auto mr-auto'>
+    <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/workouts' element={<Workout/>}/>
+        <Route path='/create' element={<Create/>}/>
+        <Route path='/exercises' element={<Exercises/>}/>
+        <Route path='/update/:id' element={<Update/>}/>
+        <Route exact path='/oneWorkout/:id' element={<OneWorkout/>}/>
+    </Routes>
     </div>
+    </>
   );
 }
 
